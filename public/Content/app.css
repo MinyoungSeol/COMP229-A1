@@ -1,0 +1,204 @@
+/* Custom CSS goes here */
+
+/*
+    file name: app.css
+    Name: Minyoung Seol
+    Student ID: 301203510
+    Date: Oct 8, 2022
+*/
+
+/*imported custom google font*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo{
+    width:150px;
+    height:150px;
+}
+.nav-link{
+    text-shadow: 1px 1px 1px rgb(100, 79, 125);
+    font-size: 16pt;
+    display: inline-block;
+    margin-right:7px;
+    font-weight: bold;
+}
+
+.container{
+    margin-top:25px;
+}
+
+.fixed-bottom{
+    width:520px;
+    height:30px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: white;
+    margin:auto;
+    bottom:30px;
+    display: flex;
+}
+.navbar-text{
+    font-size:8pt;
+    padding:0;
+    margin:auto;
+}
+
+section{
+    background-color: white;
+    border-radius: 20px;
+    padding:25px;
+    margin-bottom:100px;
+}
+
+/*Home secion style*/
+.homeContainer{
+    text-align: center;
+    padding-top:35px;
+    color:rgb(84, 69, 89);
+}
+.homeContainer > h2, h4{
+    text-align: center;
+}
+.homeContainer > a{
+    padding:6px 15px 6px 15px;
+    text-decoration: none;
+    background-color: rgb(121, 91, 121);
+    border-radius: 10px;
+    color:white;
+    margin-bottom:25px;
+    display: inline-block;
+}
+.homeContainer > a:hover{
+    background-color: thistle;
+    color:rgb(91, 77, 101);
+    transition: 0.3s ease-in-out;
+}
+
+/*About section style*/
+.aboutContainer{
+    display:flex;
+    color:rgb(84, 69, 89);
+    padding:50px;
+}
+.aboutContainer > div{
+    padding:30px;
+}
+.aboutContainer > div > h4{
+    text-align: left;
+    font-weight: bold;
+}
+.aboutContainer > div > a {
+    background-color: rgb(78, 100, 127);
+    text-decoration: none;
+    color:white;
+    border-radius: 10px;
+    padding:6px 15px 6px 15px;
+}
+.aboutContainer > div > a:hover{
+    background-color: rgb(43, 63, 87);
+    transition: 0.3s ease-in-out;
+
+}
+.profileImg{
+    width:350px;
+    height:350px;
+    display: block;
+    border-radius: 2px;
+}
+
+/*Projects section style*/
+.projectsContainer{
+    color:rgb(84, 69, 89);
+    padding:75px;
+}
+.projectsContainer > div {
+    display:flex;
+    margin-bottom:65px;
+    margin-top:15px;
+}
+.projectsContainer > div > img{
+    width:300px;
+    height:300px;
+    display: block;
+    border-radius: 4px;
+}
+.projectsContainer > div > p{
+    margin-left:40px;
+    display: block;
+}
+.projectsContainer > div > p > b{
+    font-size: 16pt;
+}
+
+/*Services section style*/
+.servicesContainer{
+    color:rgb(84, 69, 89);
+    padding:75px;
+}
+.servicesContainer > div {
+    display: flex;
+    margin-bottom:65px;
+    margin-top:35px;
+}
+.servicesContainer > div > img{
+    width:350px;
+    height:200px;
+    display: block;
+    border-radius: 4px;
+}
+.servicesContainer > div > p{
+    margin-left:40px;
+    display: block;
+}
+.servicesContainer > div > p > b{
+    font-size: 16pt;
+}
+
+/*Contact section style*/
+.contactContainer{
+    color:rgb(84, 69, 89);
+    padding:35px;
+}
+.contactContainer > h3{
+    text-align: center;
+    margin-top:30px;
+}
+.contactContainer > p{
+    text-align: center;
+}
+.contactContainer > form{
+    margin:auto;
+    width:450px;
+    margin-bottom:50px;
+}
+.contactContainer > form > h4{
+    margin-bottom:25px;
+}
+.contactContainer > form > table {
+    width: 100%;
+    margin-left:60px;
+}
+.contactContainer > form > a {
+    background-color: rgb(78, 100, 127);
+    text-decoration: none;
+    color:white;
+    border-radius: 10px;
+    padding:6px 15px 6px 15px;
+    display: block;
+    margin:auto;
+    margin-top:40px;
+    width:100px;
+    text-align: center;
+}
+.contactContainer > form > a:hover{
+    background-color: rgb(43, 63, 87);
+    transition: 0.3s ease-in-out;
+}

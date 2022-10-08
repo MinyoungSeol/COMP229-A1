@@ -1,0 +1,168 @@
+<% if(title == "Home"){ %>
+    <section class="homeContainer">
+        <h2>Hello :)</h2>
+        <h4>Welcome to my page</h4>
+
+        <br><br>
+
+        <p><b>My missions as a SETAS student are</b></p>
+        <br>
+        <p>- to be a capable developer in the near future</p>
+        <p>- to be a deligent student</p>
+
+        <br><br>
+        <a href="/about">Learn me more</a>
+    </section>
+<% } %>
+    
+<% if(title == "About"){ %>
+    <section class="aboutContainer">
+        <img src="Assets/images/me.jpg" alt="profile image" class="profileImg">
+        <div>
+            <h3>About Me</h3>
+            <br>
+            <h4>Minyoung Seol</h4>
+            <br>
+            <p>
+                Hello! I am a Software Engineering Technology student in Centennial College Canada. 
+                <br>I love programming, and I am skillful at
+                <br><b>HTML / CSS / JavaScript / C# / Java / SQL / Python</b><br>
+                If you click the button below, you can check my resume.
+                <br>Thank you for visiting my portfolio!
+            </p>
+            <br>
+            <a href="Assets/MINYOUNG-SEOL-RESUME.pdf" target="_blank">My Resume</a>
+        </div>
+    </section>
+<% } %>
+
+<% if(title == "Projects"){ %>
+    <section class="projectsContainer">
+        <h3>My Projects</h3>
+
+        <br>
+
+        <div>
+            <img src="Assets/images/project1.png">
+            <p>
+                <br>
+                <b>CANDY CATCHY</b>
+                <br><br>
+                Simple Mini-game
+                <br>Role: developer
+                <br><br>
+                It's a simple mini shooting game.
+                <br>You get score when you catch the ramdomly popping candy.
+                <br>As many times as you catch candy and earn score,
+                <br>the popping speed gets faster and faster!
+            </p>
+        </div>
+
+        <div>
+            <img src="Assets/images/project2.png">
+            <p>
+                <br>
+                <b>galerie de photos</b>
+                <br><br>
+                Online Gallery
+                <br>Role: developer
+                <br><br>
+                An online painting gallery.
+                <br>You can enjoy 10 pieces of classic paintings
+                <br>with its smooth slide effect.
+            </p>
+        </div>
+
+        <div>
+            <img src="Assets/images/project3.png">
+            <p>
+                <br>
+                <b>Centennial College Survey Form</b>
+                <br><br>
+                Online Survey Form
+                <br>Role: developer
+                <br><br>
+                Course / Instructor evaluation form for Centennial students.
+                <br>Students can evaluate their learning experience
+                <br>in separated aspects.
+            </p>
+        </div>
+    </section>
+<% } %>
+
+<% if(title == "Services"){ %>
+    <section class="servicesContainer">
+        <h3>I am working on ···</h3>
+
+        <div>
+            <img src="Assets/images/service1.jpg">
+            <p>
+                <br>
+                <b>Programming</b>
+                <br><br>
+                Language: HTML / CSS / JavaScript / C# / Java / SQL / Python
+                <br>Operating System: Window / Mac / UNIX / Linux
+            </p>
+        </div>
+
+        <div>
+            <img src="Assets/images/service2.jpg">
+            <p>
+                <br>
+                <b>ANABADA</b>
+                <br><br>
+                Online second-handed market for Centennial College students.
+                <br>Students can sell and buy their used textbooks and school supplies.
+                <br>With this service, they save their budget and the environment at the same time!
+            </p>
+        </div>
+    </section>
+<% } %>
+
+<% if(title == "Contact Me!"){ %>
+    <section class="contactContainer">
+        <h3>Feel Free to Contact Me</h3>
+
+        <br><br><br>
+        <p><i class="fas fa-solid fa-envelope"></i> mseol1@my.centennialcollege.ca</p>
+        <p><i class="fas fa-solid fa-location-dot"></i> M1G 3T8</p>
+        <p><i class="fas fa-solid fa-mobile"></i> +1 (647)308-9091</p>
+        <br><br><br>
+
+        <form>
+            <h4>Contact Me</h4>
+
+            <table>
+                <thead></thead>
+
+                <tbody>
+                    <tr>
+                        <td><label for="fname" name="fname">First Name</label></td>
+                        <td><input type="text" name="fname" placeholder="your first name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname" name="lname">Last Name</label></td>
+                        <td><input type="text" name="lname" placeholder="your last name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contact" name="contact">Contact Number</label></td>
+                        <td><input type="text" name="contact" placeholder="your contact number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" name="email">E-Mail</label></td>
+                        <td><input type="text" name="email" placeholder="your email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fname" name="fname">Message</label></td>
+                        <td><input type="textbox" name="fname" placeholder="Any message for me?"></td>
+                    </tr>
+                </tbody>
+
+                <tfoot></tfoot>
+            </table>
+
+            <a href="/home">Submit</a>
+        </form>
+
+    </section>
+<% } %>
