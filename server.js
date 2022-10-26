@@ -11,15 +11,15 @@
     Date: Oct 8, 2022
 */
 
-var app = require('./app');
-var debug = require('debug')('assignment1:server');
+var app = require('./config/app');
+var debug = require('debug')('assignment2:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
+var port = normalizePort(process.env.PORT || '3200');
 app.set('port', port);
 
 /**
