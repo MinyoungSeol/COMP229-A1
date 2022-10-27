@@ -5,22 +5,11 @@ var mongoose = require('mongoose');
 //Connect to our Contact model
 var Contact = require('../models/contact');
 
+var contactController = require('../controllers/contact');
+
 
 /* GET Route for the Contact List Page - READ Operation */
-router.get('/', (req, res, next) => {
-    Contact.find((err, contactList) => {
-        if(err)
-        {
-            return console.error(err);
-        }
-        else
-        {
-            //console.log(contactList);
-
-            res.render('contact/list', {title: 'Contact List', ContactList: contactList});
-        }
-    });
-});
+router.get('/', contactController.displayContactList);
 
 /* GET Route for displaying Add Page - CREATE Operation */
 router.get('/add', (req, res, next) => {
