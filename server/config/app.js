@@ -10,6 +10,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
+
+//modules for authentication
+var session = require('express-session');
+var passport = require('passport');
+
+var passportJWT = require('passport-jwt');
+var JWTStrategy = passportJWT.Strategy;
+var ExtractJWT = passportJWT.ExtractJwt;
+
+var passportlocal = require('passport-local');
+var localStrategy = passportlocal.Strategy;
+var flash = require('connect-flash');
 
 //database setup
 var mongoose = require('mongoose');
@@ -40,6 +53,51 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+//setup express session
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}));
+
+//initialize flash
+app.use(flash());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+//passport user configuration
+
+//create a User Model Instance
+var userModel = require('../models/user');
+var User = userModel.User;
+
+// implement a User Authentication Strategy
+passport.use(User.createStrategy());
+
+//serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+var jwtOptions = {};
+jwtOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = DB.Secret;
+
+var strategy = new JWTStrategy(jwtOptions, (jwt_payload, done) => {
+  User.findById(jwt_payload.id)
+    .then(user => {
+      return done(null, user);
+    })
+    .catch(err => {
+      return done(err, false);
+    });
+});
+
+passport.use(strategy);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
